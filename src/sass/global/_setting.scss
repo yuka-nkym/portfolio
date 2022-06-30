@@ -1,0 +1,106 @@
+@use "sass:math";
+
+////////////////////
+// インナー幅設定
+////////////////////
+$inner: 1100px;
+
+// 余白
+$padding-pc: 25px;
+$padding-sp: 20px;
+
+////////////////////
+// フォント設定
+////////////////////
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap");
+@font-face {
+  font-family: "myfont";
+  src: url("../ROLAchan/ROLAchan-Regular.otf") format("opentype");
+}
+$base-font-family: "Noto Sans JP", sans-serif;
+$second-font-family: "myfont", serif;
+
+body {
+  font-family: $base-font-family;
+}
+
+// フォントウェイト
+$regular: 400;
+$medium: 500;
+$bold: 700;
+
+////////////////////
+// 色の指定
+////////////////////
+
+$black: #111;
+$white: #fff;
+$gray: #333;
+$gray-sub: #a9a9a9;
+$blue: #0052d4;
+$blue-sub: #65c7f7;
+$color-main: #c8ddf4;
+$color-sub: #ff99cc;
+
+////////////////////
+// メディアクエリとブレークポイントの設定
+////////////////////
+
+$breakpoints: (
+  sm: 600,
+  md: 768,
+  lg: 1024,
+  xl: 1440,
+);
+
+//メディアクエリー
+$mediaquerys: (
+  sm: "screen and (min-width: #{map-get($breakpoints,'sm')}px)",
+  md: "screen and (min-width: #{map-get($breakpoints,'md')}px)",
+  lg: "screen and (min-width: #{map-get($breakpoints,'lg')}px)",
+  xl: "screen and (min-width: #{map-get($breakpoints,'xl')}px)",
+);
+
+@mixin mq($mediaquery: md) {
+  @media #{map-get($mediaquerys, $mediaquery)} {
+    @content;
+  }
+}
+
+// remへの計算
+@function rem($pixels) {
+  @return math.div($pixels, 16) * 1rem;
+}
+
+////////////////////
+// 非表示設定
+////////////////////
+
+//768px以上を表示
+.u-desktop {
+  display: none;
+  @include mq("md") {
+    display: block;
+  }
+}
+
+//モバイルのみ表示
+.u-mobile {
+  @include mq("md") {
+    display: none;
+  }
+}
+
+// 階層
+$layer: (
+  loader: 80,
+  hamburger: 70,
+  drawer: 60,
+  header: 50,
+  pagetop: 40,
+  footer: 30,
+  top: 20,
+  btn: 10,
+  default: 1,
+  circle: -1,
+);

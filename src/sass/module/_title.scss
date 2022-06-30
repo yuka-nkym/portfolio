@@ -1,0 +1,86 @@
+@use "global" as *;
+
+.title {
+  position: relative;
+  padding: rem(35) 0;
+  font-size: rem(18);
+  display: inline-block;
+
+  @include mq() {
+    font-size: rem(28);
+    padding: rem(90) 0;
+  }
+}
+
+.title span {
+  position: relative;
+  z-index: map-get($layer, "top");
+  top: rem(20);
+  letter-spacing: 0.15em;
+
+  @include mq() {
+    top: rem(10);
+  }
+}
+
+.title::before {
+  content: attr(data-en);
+  position: absolute;
+  color: $color-main;
+  font-size: rem(50);
+  font-family: $second-font-family;
+  font-weight: $medium;
+  z-index: map-get($layer, "circle");
+  top: 0;
+  transform: translateX(-50%);
+
+  @include mq() {
+    font-size: rem(120);
+  }
+}
+
+.title--center::before {
+  left: 50%;
+}
+
+.title--left::before {
+  left: calc(50% - rem(65));
+
+  @include mq() {
+    left: calc(50% - rem(190));
+  }
+}
+
+.title--right::before {
+  left: calc(50% + rem(65));
+
+  @include mq() {
+    left: calc(50% + rem(200));
+  }
+}
+
+.title::after {
+  content: "";
+  position: absolute;
+  top: calc(50% + rem(20));
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: rem(50);
+  height: rem(50);
+  background: $color-sub;
+  border-radius: 50%;
+
+  @include mq() {
+    top: calc(50% + rem(10));
+    width: rem(80);
+    height: rem(80);
+    transition: 0.3s;
+  }
+}
+
+.title:hover::after {
+  @media (any-hover: hover) {
+    width: rem(260);
+    border-radius: 280px;
+  }
+}

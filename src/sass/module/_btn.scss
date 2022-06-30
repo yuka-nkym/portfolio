@@ -1,0 +1,61 @@
+@use "global" as *;
+
+.btn {
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding: rem(30) 0 rem(30) rem(33);
+  color: $black;
+  font-size: rem(18);
+  font-weight: $medium;
+  margin: 0 auto;
+}
+
+.btn span {
+  position: relative;
+  padding: rem(10);
+  background: $white;
+  z-index: map-get($layer, "default");
+  transition: 0.3s;
+}
+
+.btn:hover span {
+  @media (any-hover: hover) {
+    background: $color-main;
+  }
+}
+
+.btn::before {
+//矢印
+  content: "";
+  transform: rotate(45deg);
+  margin-right: rem(10);
+  width: rem(16);
+  height: rem(16);
+  border-top: 3px solid $black;
+  border-right: 3px solid $black;
+  z-index: map-get($layer, "btn");
+}
+
+.btn::after {
+  //円
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: rem(80);
+  height: rem(80);
+  border: 2px solid $blue;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+
+.btn:hover::after {
+  @media (any-hover: hover) {
+    left: -50%;
+    background: $color-main;
+    width: rem(250);
+    border-radius: 280px;
+  }
+}

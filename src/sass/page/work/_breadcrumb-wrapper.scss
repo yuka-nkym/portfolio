@@ -1,0 +1,11 @@
+@use "global" as *;
+
+.breadcrumb-wrapper {
+  margin-top: rem(90);
+  padding: 0 $padding-sp;;
+
+  @include mq() {
+    margin-top: rem(160);
+    padding: 0 $padding-pc;
+  }
+}

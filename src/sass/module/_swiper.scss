@@ -1,0 +1,66 @@
+@use "global" as *;
+
+.swipers {
+  position: relative;
+  @include mq() {
+    width: min(100%, rem(400));
+  }
+}
+
+.swiper.swiper {
+  width: min(100%, rem(600));
+
+  @include mq() {
+    width: min(100%, rem(400));
+  }
+}
+
+.swiper-wrapper > .swiper-slide {
+  width: 100%;
+  aspect-ratio: 1500/1000;
+}
+
+.swiper-wrapper > .swiper-slide img {
+  height: 100%;
+  object-fit: cover;
+}
+
+.swiper-wrapper {
+  padding-bottom: rem(30);
+
+  @include mq() {
+    padding-bottom: 0;
+  }
+}
+
+.swiper-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
+  @include mq() {
+    bottom: rem(-30);
+  }
+}
+
+.swiper-pagination {
+  @include mq() {
+    text-align: left;
+  }
+}
+
+.swiper-pagination-bullet {
+  background: $gray-sub;
+  opacity: 1;
+  width: rem(8);
+  height: rem(8);
+
+  &-active {
+    background: $blue;
+  }
+}
+
+//ページネーションの余白
+.swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
+.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+  margin: 0 rem(6);
+}

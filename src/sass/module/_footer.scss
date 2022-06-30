@@ -1,0 +1,94 @@
+@use "global" as *;
+
+.footer {
+  color: $white;
+  text-align: center;
+  background: $blue;
+  display: inline-block;
+  width: 100%;
+  padding: rem(32) 0 rem(16);
+  border-radius: 50% / 35% 35% 0 0;
+
+  @include mq() {
+    padding: rem(40) 0 rem(16);
+    border-radius: 50% / 100% 100% 0 0;
+  }
+}
+
+.footer__items {
+  display: flex;
+  justify-content: center;
+}
+
+.footer__item a {
+  display: inline-block;
+  width: 100%;
+  font-size: rem(20);
+  padding: rem(8) rem(16);
+  letter-spacing: 0.15em;
+
+  @include mq() {
+    font-size: rem(32);
+    position: relative;
+    transition: 0.3s;
+    padding: rem(16) rem(32);
+  }
+}
+
+.footer__item a:hover {
+  @media (any-hover: hover) {
+    transform: rotate(5deg);
+    color: $color-sub;
+  }
+}
+
+.footer__link {
+  padding: rem(8);
+  display: inline-block;
+
+  @include mq() {
+    padding: rem(16);
+  }
+}
+
+.footer__link:hover {
+  @media (any-hover: hover) {
+    color: $color-sub;
+  }
+}
+
+.footer__link span {
+  display: inline-block;
+  transition: 0.5s;
+}
+
+.footer__link:hover span {
+  @media (any-hover: hover) {
+    transform: rotateX(360deg);
+  }
+}
+
+.footer__link .fa-house {
+  font-size: rem(24);
+
+  @include mq() {
+    font-size: rem(32);
+  }
+}
+
+.footer__copyright {
+  line-height: 2;
+
+  @include mq() {
+    padding-top: rem(8);
+  }
+}
+
+.footer__copyright small {
+  font-size: rem(12);
+  letter-spacing: 0.15em;
+
+  @include mq() {
+    font-size: rem(14);
+  }
+}

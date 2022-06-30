@@ -1,0 +1,79 @@
+@use "global" as *;
+
+.work-images__title {
+  font-size: rem(24);
+  text-align: center;
+  position: relative;
+  padding-bottom: rem(8);
+  width: 100%;
+  border-bottom: 2px solid $blue;
+
+  @include mq() {
+    font-size: rem(32);
+    padding-bottom: rem(16);
+  }
+}
+
+.work-images__title::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: rem(50);
+  height: rem(2);
+  background: $color-sub;
+
+  @include mq() {
+    width: rem(100);
+  }
+}
+
+.work-images__inner {
+  margin-top: rem(24);
+
+  @include mq() {
+    margin-top: rem(40);
+  }
+}
+
+.work-images__items {
+  @include mq() {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+}
+
+.work-images__item {
+  width: min(100%, rem(600));
+  margin-left: auto;
+  margin-right: auto;
+
+  @include mq() {
+    width: calc((100% - rem(72)) / 4);
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+.work-images__item:not(:first-child) {
+  margin-top: rem(16);
+
+  @include mq() {
+    margin-top: 0;
+  }
+}
+
+//4倍した次のカード以外
+.work-images__item:not(:nth-of-type(4n + 1)) {
+  @include mq() {
+    margin-left: rem(24);
+  }
+}
+
+// 4枚目以上
+.work-images__item:nth-of-type(n + 5) {
+  @include mq() {
+    margin-top: rem(24);
+  }
+}

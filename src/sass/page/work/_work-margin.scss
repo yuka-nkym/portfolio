@@ -1,0 +1,9 @@
+@use "global" as *;
+
+.work-margin {
+  margin-top: rem(60);
+
+  @include mq() {
+    margin-top: rem(120);
+  }
+}

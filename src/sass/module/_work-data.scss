@@ -1,0 +1,66 @@
+@use "global" as *;
+
+.work-data__wrapper {
+  border: 1px solid $gray-sub;
+  width: 95%;
+  padding: rem(32) rem(16);
+  margin-right: auto;
+  margin-left: auto;
+  position: relative;
+
+  @include mq() {
+    width: min(100%, $inner);
+    padding: rem(48) rem(32);
+  }
+}
+
+.work-data__wrapper::before,
+.work-data__wrapper::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+}
+
+.work-data__wrapper::before {
+  top: rem(-10);
+  right: rem(-10);
+  border-top: 30px solid $color-main;
+  border-right: 30px solid $color-main;
+  border-bottom: 30px solid transparent;
+  border-left: 30px solid transparent;
+}
+
+.work-data__wrapper::after {
+  bottom: rem(-10);
+  left: rem(-10);
+  border-top: 30px solid transparent;
+  border-right: 30px solid transparent;
+  border-bottom: 30px solid $color-main;
+  border-left: 30px solid $color-main;
+}
+
+.work-data__list:not(:first-child) {
+  margin-top: rem(16);
+}
+
+.work-data__title {
+  font-size: rem(18);
+  font-weight: $medium;
+  line-height: 2;
+}
+
+.work-data__text {
+  text-align: justify;
+}
+
+.work-data__text a {
+  color: $blue;
+  border-bottom: 1px solid $blue;
+}
+
+.work-data__text a:hover {
+  @media (any-hover: hover) {
+    opacity: 0.6;
+  }
+}

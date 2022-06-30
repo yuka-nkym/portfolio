@@ -1,0 +1,40 @@
+@use "global" as *;
+/* カード複数 */
+
+.cards {
+  @include mq() {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+//余白
+.cards__item:not(:first-child) {
+  margin-top: rem(20);
+
+  @include mq() {
+    margin-top: 0;
+  }
+}
+
+/* 枚数が増えた時と2枚目以降余白*/
+//4倍した次のカード以外
+.cards__item:not(:nth-of-type(4n + 1)) {
+  @include mq() {
+    margin-left: rem(24);
+  }
+}
+
+// 4枚目以上
+.cards__item:nth-of-type(n + 5) {
+  @include mq() {
+    margin-top: rem(24);
+  }
+}
+
+//sp1列,md4列
+.cards--col4 > .cards__item {
+  @include mq() {
+    width: min(100%, calc((100% - rem(72)) / 4));
+  }
+}

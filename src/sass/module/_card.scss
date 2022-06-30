@@ -1,0 +1,72 @@
+@use "global" as *;
+/* カード単体 */
+
+.card {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  width: min(100%, rem(600));
+  transition: 0.3s;
+}
+
+.card__img {
+  aspect-ratio: 1500/822;
+  width: 100%;
+  transition: 0.3s;
+  position: relative;
+}
+
+.card__img::before {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 0%;
+  background: rgba(255, 255, 255, 0.4);
+  background: rgba(0, 82, 212, 0.2);
+  transition: 0.3s;
+  z-index: map-get($layer, "top");
+}
+
+.card__img img {
+  height: 100%;
+  object-fit: cover;
+  transition: 0.3s;
+  overflow: hidden;
+}
+
+.card__info {
+  padding: rem(16) rem(8);
+  line-height: 1.5;
+}
+
+.card__title {
+  font-size: rem(18);
+
+  @include mq() {
+    font-size: rem(20);
+  }
+}
+
+.card__link,
+.card__type {
+  color: $gray-sub;
+}
+
+.card:hover .card__img::before {
+  @media (any-hover: hover) {
+    width: 100%;
+    height: 100%;
+    transform: scale(1.1);
+    border-radius: 10px;
+  }
+}
+
+.card:hover .card__img img {
+  @media (any-hover: hover) {
+    transform: scale(1.1);
+    border-radius: 10px;
+  }
+}

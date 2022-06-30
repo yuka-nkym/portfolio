@@ -1,0 +1,13 @@
+@use "global" as *;
+
+.works__title {
+  text-align: center;
+}
+
+.works__cards {
+  margin-top: rem(40);
+
+  @include mq() {
+    margin-top: rem(120);
+  }
+}

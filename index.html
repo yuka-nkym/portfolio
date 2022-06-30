@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="robots" content="noindex">
+    <title>Yuka Nakayama's Portfolio</title>
+    <meta name="description" content="中山由佳のポートフォリオサイトです。"/>
+    <!-- ogp -->
+    <meta property="og:title" content="Yuka Nakayama's Portfolio"/>
+    <meta property="og:site_name" content="Yuka Nakayama's Portfolio"/>
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ynyn.site" />
+    <meta property="og:description" content="中山由佳のポートフォリオサイトです。"/>
+    <meta property="og:image" content="https://ynyn.site/images/common/works-4.webp"/>
+    <meta name="twitter:card" content="summary" />
+    <!-- ファビコン -->
+    <link rel="icon" href="./images/common/favicon.ico" id="favicon" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./images/common/apple-touch-icon-180×180.webp"/>
+    <!-- css -->
+    <link rel="stylesheet" href="css/animate.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+    <link href="css/loaders.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
+    <link rel="stylesheet" href="./css/styles.css" />
+    <!-- JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js" defer></script>
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js" defer></script>
+    <script src="js/wow.min.js" defer></script>
+    <script src="./js/script.js" defer></script>
+  </head>
+  <body>
+
+    <header class="header">
+        <button class="header__drawer hamburger js-hamburger" aria-label="Toggle navigation">
+          <span class="hamburger-l"></span>
+          <span class="hamburger-m"></span>
+          <span class="hamburger-s"></span>
+          <span class="hamburger-m"></span>
+          <span class="hamburger-l"></span>
+        </button>
+
+        <div class="header__nav nav js-drawer-menu">
+          <ul class="nav__items">
+            <li class="nav__item">
+              <a href="#works">Works<span>制作実績</span></a>
+            </li>
+            <li class="nav__item">
+              <a href="#skills">Skills<span>スキル</span></a>
+            </li>
+            <li class="nav__item">
+              <a href="#about">About<span>私について</span></a>
+            </li>
+          </ul>
+        </div>
+        <!-- /.nav -->
+    </header>
+
+    <div class="top">
+      <div class="top__inner inner">
+        <div class="top__header">
+          <h1 class="top__title">Portfolio</h1>
+          <p class="top__sub-title">Yuka Nakayama</p>
+        </div>
+        <ul class="top__items wow fadeInUp">
+          <li class="top__item"><a href="#works">Works</a></li>
+          <li class="top__item"><a href="#skills">Skills</a></li>
+          <li class="top__item"><a href="#about">About</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <main>
+    <section id="works" class="works section-margin">
+      <div class="works__media media">
+        <div class="works__title wow fadeInUp">
+          <h2 class="title title--right" data-en="Works"><span>制作実績</span></h2>
+        </div>
+        <div class="media__inner">
+          <div class="media__wrapper">
+
+            <div class="media__swipers swipers">
+              <div class="swiper js-swiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <img src="./images/common/swiper-1.webp" alt="D.B.Academy様の事業サイトのモックアップ">
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="./images/common/swiper-2.webp" alt="斎藤裕介様の事業サイトのモックアップ">
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="./images/common/swiper-3.webp" alt="WordPressのデモサイトのモックアップ">
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="./images/common/swiper-4.webp" alt="ポートフォリオサイトのモックアップ">
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+
+            <div class="media__content wow fadeInUp">
+                <p class="media__main-title">制作実績について</p>
+                <p class="media__text">知人の事業サイト2件、コーディングからWordPress化まで行ったデモサイト1件、ポートフォリオ1件を掲載しています。</p>
+            </div>
+
+        </div><!-- media__wrapper -->
+        </div><!-- inner -->
+      </div>
+      <!-- /.media -->
+
+      <div class="works__cards">
+        <div class="works__inner inner">
+          <div class="cards cards--col4">
+            <a href="db.html" class="card cards__item wow fadeInUp" data-wow-duration=".4s">
+              <figure class="card__img">
+                <img src="./images/common/works-1.webp" alt="D.B.Academy様の事業サイトのモックアップ">
+              </figure>
+              <div class="card__info">
+                <p class="card__title">D.B.Academy様</p>
+                <p class="card__link">dbaseballacademy.com</p>
+                <p class="card__type">事業サイト</p>
+              </div>
+            </a>
+            <a href="ys.html" class="card cards__item wow fadeInUp" data-wow-duration=".8s">
+              <figure class="card__img">
+                <img src="./images/common/works-2.webp" alt="斎藤裕介様の事業サイトのモックアップ">
+              </figure>
+              <div class="card__info">
+                <p class="card__title">斎藤裕介様｜ソニー生命</p>
+                <p class="card__link">ynyn.conohawing.com</p>
+                <p class="card__type">事業サイト</p>
+              </div>
+            </a>
+            <a href="oc.html" class="card cards__item wow fadeInUp" data-wow-duration="1.6s">
+              <figure class="card__img">
+                <img src="./images/common/works-3.webp" alt="WordPressサンプルサイトのモックアップ">
+              </figure>
+              <div class="card__info">
+                <p class="card__title">Open Coffee</p>
+                <p class="card__link">sample-coffee.ynyn.site</p>
+                <p class="card__type">WordPressサンプルサイト</p>
+              </div>
+            </a>
+            <a href="yn.html" class="card cards__item wow fadeInUp" data-wow-duration="1.2s">
+              <figure class="card__img">
+                <img src="./images/common/works-4.webp" alt="ポートフォリオサイトのモックアップ">
+              </figure>
+              <div class="card__info">
+                <p class="card__title">中山由佳</p>
+                <p class="card__link">ynyn.site</p>
+                <p class="card__type">ポートフォリオサイト</p>
+              </div>
+            </a>
+          </div><!-- cards -->
+        </div>
+      </div><!-- /.works__cards -->
+    </section>
+
+    <section id="skills" class="skills section-margin">
+      <div class="skills__inner inner">
+      <div class="skills__title wow fadeInUp">
+        <h2 class="title title--left" data-en="Skills"><span>スキル</span></h2>
+      </div>
+
+      <dl class="skills__items">
+        <div class="skills__item wow fadeInUp">
+          <dt class="skills__category">言語等</dt>
+          <dd class="skills__text">HTML / CSS / Sass(SCSS)/ jQuery / WordPress / Bootstrap</dd>
+        </div>
+        <div class="skills__item wow fadeInUp">
+          <dt class="skills__category">環境、ツール</dt>
+          <dd class="skills__text">gulp / VSCode / Local / MAMP / XAMPP</dd>
+        </div>
+        <div class="skills__item wow fadeInUp">
+          <dt class="skills__category">保有資格</dt>
+          <dd class="skills__text">情報セキュリティマネジメント / MOS 2013(Word,Excel) / ワープロ検定1級 / 文書デザイン検定1級 / FP3級 / 簿記3級</dd>
+        </div>
+        <div class="skills__item wow fadeInUp">
+          <dt class="skills__category">その他</dt>
+          <dd class="skills__text">・PerfectPixel等による品質チェック<br class="u-mobile">
+            <a href="https://reflective-condor-b2c.notion.site/c2d897398fef4985b092205c892c6631" class="skills__link" target="_blank" rel="noopener noreferrer">
+              Notionで作成した品質チェックリストはこちら
+              <i class="fa-regular fa-hand-pointer"></i>
+            </a>
+          </dd>
+          <dd class="skills__text">・CSS設計のBEM手法に基づいたコーディング</dd>
+          <dd class="skills__text">・スマートフォンファーストのコーディング</dd>
+          <dd class="skills__text">・Adobe XD,Figma,Photoshopのデザインカンプからのコーディング</dd>
+        </div>
+        <div class="skills__item wow fadeInUp">
+          <dt class="skills__category">自己学習で使用した教材</dt>
+          <dd class="skills__text">デイトラ / Udemy(たにぐちまことさんWordPressテーマ開発講座) / WordPressの教科書 / Progate / CSS設計完全ガイド / CSS設計の教科書 / 教科書では教えてくれないHTML&CSS / HTML&CSSとWebデザイン / Sassの教科書 / Adobe XDではじめるWebデザイン&プロトタイピング / 知識ゼロからはじめるPhotoshopの教科書 / なるほどデザイン / ノンデザイナーズ・デザインブック / デザイン入門教室</dd>
+        </div>
+        <div class="skills__item wow fadeInUp">
+          <dt class="skills__category">職業訓練の内容</dt>
+          <dd class="skills__text">HTML / CSS / PHP / JavaScript / C言語 / データベース構築 / インフラ構築 / SQL文 / Linux / マイコン</dd>
+        </div>
+      </dl>
+    </div>
+    <!-- /.skills__inner inner -->
+    </section>
+
+    <section id="about" class="about section-margin">
+      <div class="about__title wow fadeInUp">
+        <h2 class="title title--center" data-en="About"><span>私について</span></h2>
+      </div>
+      <div class="about__inner inner">
+        <h3 class="about__sub-title">中山 由佳｜Yuka Nakayama</h3>
+        <dl class="about__items">
+          <div class="about__item">
+            <dt class="about__category">プロフィール</dt>
+            <dd class="about__text">北海道北広島市出身、茨城県在住。1988年4月生まれ。</dd>
+          </div>
+          <div class="about__item">
+            <dt class="about__category">経歴</dt>
+            <dd class="about__text">音楽大学のピアノコースを卒業後、婦人服の販売員として5年間勤務し、
+              社内の客単価ランキング3位達成。
+              退職後、看護師専門の人材派遣・紹介会社にて、キャリアアドバイザーとして4年7ヶ月間勤務。
+              茨城県への転居に伴い退職し、プログラミングの職業訓練を2021年10月まで6ヶ月間受講。
+              その後、オンラインスクールデイトラのWeb制作コースを受講。</dd>
+          </div>
+          <div class="about__item">
+            <dt class="about__category">趣味</dt>
+            <dd class="about__text">コーディング / ライブ / ピアノ / 読書 / ランニング</dd>
+          </div>
+          <div class="about__item">
+            <dt class="about__category">Webコーダーを目指すきっかけ</dt>
+            <dd class="about__text">
+              前職で、病院や介護施設について調べる際に、機能していないWebサイトが多かったことや、
+              知人に個人事業主が多くWeb関連で苦戦する姿をみて、役に立ちたいと思いました。
+              職業訓練のカリキュラムでHTML&CSSは5日のみだったのですが、
+              自己学習でコーディングの難しさと楽しさを実感しています。
+            </dd>
+          </div>
+          <div class="about__item">
+            <dt class="about__category">目標</dt>
+            <dd class="about__text">デザインを忠実に再現するWebコーダーを目指します。
+              訂正がないよう確認をしっかり行い、PerfectPixelなどを使用し細かくチェックします。
+              また、今後デザインスキルも習得し、集客や売上アップに繋がるWebサイト制作を目標に、
+              デザインとコーディングの両方を行いたいです。</dd>
+          </div>
+        </dl>
+      </div>
+      <!-- /.about__inner inner -->
+    </section>
+    </main>
+
+
+    <footer id="footer" class="footer section-margin">
+      <div class="footer__inner inner">
+        <ul class="footer__items">
+          <li class="footer__item"><a href="#works"><span>Works</span></a></li>
+          <li class="footer__item"><a href="#skills"><span>Skills</span></a></li>
+          <li class="footer__item"><a href="#about"><span>About</span></a></li>
+        </ul>
+        <a href="#" class="footer__link" aria-label="ページトップに戻る"><span><i class="fa-solid fa-house"></i></span></a>
+        <p class="footer__copyright">
+          <small lang="en">&copy; 2022 Yuka Nakayama</small>
+        </p>
+      </div>
+      <!-- /.footer__inner inner -->
+    </footer>
+    <a href="#" class="pagetop js-pagetop" aria-label="ページトップに戻る">
+      <i class="fa-solid fa-angles-up"></i>
+    </a>
+      <!-- ローディングアニメーション -->
+      <div class="loader-bg js-loader-bg">
+        <div class="loader js-loader">
+      
+          <div class="loader">
+            <div class="loader-inner ball-pulse-sync">
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+          </div>
+      
+        </div>
+      </div>
+
+  </body>
+</html>

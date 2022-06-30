@@ -1,0 +1,9 @@
+@use "global" as *;
+
+.work-btn {
+  margin-top: rem(24);
+
+  @include mq() {
+    margin-top: rem(80);
+  }
+}

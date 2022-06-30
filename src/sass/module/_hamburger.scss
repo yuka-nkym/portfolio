@@ -1,0 +1,114 @@
+@use "global" as *;
+
+$drawer-height: rem(2); //ドロワー線の高さ
+$drawer-color: $blue; //ドロワー線の色
+
+.hamburger {
+  padding: rem(8);
+  z-index: map-get($layer, "hamburger");
+
+  @include mq() {
+    padding: rem(16);
+  }
+}
+
+.hamburger.is-change {
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+}
+
+.hamburger span {
+  position: relative;
+  display: block;
+  height: $drawer-height;
+  background: $drawer-color;
+  transition: 0.5s;
+  margin: 0 auto;
+}
+
+.hamburger-l {
+  width: rem(50);
+
+  @include mq() {
+    width: rem(100);
+  }
+}
+
+.hamburger-m {
+  width: rem(35);
+
+  @include mq() {
+    width: rem(75);
+  }
+}
+
+.hamburger-s {
+  width: rem(20);
+
+  @include mq() {
+    width: rem(50);
+  }
+}
+
+.hamburger:hover span {
+  @media (any-hover: hover) {
+    width: rem(100);
+  }
+}
+
+.hamburger span:not(:first-child) {
+  margin-top: rem(6);
+
+  @include mq() {
+    margin-top: rem(12);
+  }
+}
+
+.hamburger.is-open span {
+  background: $black;
+}
+
+.hamburger.is-open span:nth-child(1) {
+  top: rem(6);
+  transform: rotate(135deg);
+
+  @include mq() {
+    top: rem(22);
+  }
+}
+
+.hamburger.is-open span:nth-child(2) {
+  top: rem(6);
+  transform: rotate(135deg);
+  width: rem(50);
+
+  @include mq() {
+    width: rem(100);
+    top: rem(22);
+  }
+}
+
+.hamburger.is-open span:nth-child(3) {
+  transform: translateY(-50%);
+  opacity: 0;
+}
+
+.hamburger.is-open span:nth-child(4) {
+  top: rem(-18);
+  transform: rotate(-135deg);
+  width: rem(50);
+
+  @include mq() {
+    width: rem(100);
+    top: rem(-18);
+  }
+}
+
+.hamburger.is-open span:nth-child(5) {
+  top: rem(-18);
+  transform: rotate(-135deg);
+
+  @include mq() {
+    top: rem(-18);
+  }
+}

@@ -1,0 +1,114 @@
+@use "global" as *;
+
+.skills {
+  position: relative;
+}
+
+.skills::after {
+  content: "";
+  position: absolute;
+  bottom: rem(-60);
+  left: 0;
+  z-index: map-get($layer, "circle");
+  height: rem(400);
+  width: 70%;
+  border-radius: 0 280px 280px 0;
+  background: $color-main;
+  background: rgba(200, 221, 244, 0.7);
+
+  @include mq() {
+    bottom: rem(-80);
+    height: rem(460);
+  }
+}
+
+.skills__title {
+  text-align: center;
+}
+
+.skills__items {
+  margin-top: rem(40);
+
+  @include mq() {
+    margin-top: rem(80);
+  }
+}
+
+.skills__item {
+  position: relative;
+  padding-bottom: rem(8);
+  width: 100%;
+  border-bottom: 2px solid $blue;
+
+  @include mq() {
+    padding-bottom: rem(16);
+  }
+}
+
+.skills__item:not(:first-child) {
+  margin-top: rem(8);
+
+  @include mq() {
+    margin-top: rem(16);
+  }
+}
+
+.skills__item::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: rem(50);
+  height: rem(2);
+  background: $color-sub;
+
+  @include mq() {
+    width: rem(100);
+  }
+}
+
+.skills__category {
+  font-size: rem(18);
+
+  @include mq() {
+    font-size: rem(20);
+  }
+}
+
+.skills__category::before {
+  font-family: "FontAwesome";
+  content: "\f0eb";
+  padding-right: rem(4);
+}
+
+.fa-lightbulb {
+  padding-right: rem(6);
+}
+
+.skills__text {
+  line-height: 1.6;
+  text-align: justify;
+}
+
+.skills__link {
+  font-size: rem(18);
+  font-weight: $medium;
+  line-height: 1.8;
+  border-bottom: 1px dotted $blue;
+  padding: 0 rem(16);
+  transition: 0.3s;
+
+  @include mq() {
+    margin-left: rem(24);
+  }
+}
+
+.skills__text .fa-hand-pointer {
+  padding-left: rem(4);
+}
+
+.skills__link:hover {
+  @media (any-hover: hover) {
+    color: $blue;
+  }
+}

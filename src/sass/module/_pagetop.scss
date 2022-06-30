@@ -1,0 +1,43 @@
+@use "global" as *;
+
+.pagetop {
+  display: block;
+  position: fixed;
+  bottom: rem(41);
+  right: rem(21);
+  background-color: $color-sub;
+  width: rem(45);
+  height: rem(45);
+  z-index: map-get($layer, "pagetop");
+  clip-path: polygon(50% 0%, 90% 20%, 100% 60%, 75% 100%, 25% 100%, 0% 60%, 10% 20%);
+  transition: 0.3s ease;
+
+  @include mq() {
+    width: rem(60);
+    height: rem(60);
+    bottom: rem(32);
+    right: rem(32);
+  }
+}
+
+.pagetop:hover {
+  @include mq() {
+    bottom: rem(45);
+  }
+}
+
+.fa-angles-up {
+  color: $white;
+  font-size: rem(30);
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.pagetop:hover .fa-angles-up {
+  @media (any-hover: hover) {
+    color: $black;
+  }
+}

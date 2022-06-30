@@ -1,0 +1,127 @@
+@use "global" as *;
+
+.top {
+  width: min(100%, 100%);
+  height: 100vh;
+  background: $black;
+  outline: 1px solid $white;
+  outline-offset: rem(-20);
+  position: relative;
+  background: linear-gradient(to right, $blue, $blue-sub, $color-main);
+
+  @include mq() {
+    outline-offset: rem(-40);
+  }
+}
+
+.top__header {
+  content: '';
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: $second-font-family;
+  background: $white;
+  padding: rem(60) rem(40);
+  border-radius:34% 66% 73% 27% / 47% 66% 34% 53%;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px -20px 23px 0px inset, rgba(0, 0, 0, 0.13) 0px -33px 27px 0px inset, rgba(0, 0, 0, 0.1) 0px -75px 36px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+
+  @include mq() {
+    top: 15%;
+    padding: rem(110) rem(100);
+  }
+}
+
+.top__title {
+  font-size: rem(40);
+
+  @include mq() {
+    font-size: rem(60);
+  }
+}
+
+.top__sub-title {
+  font-size: rem(20);
+  white-space:nowrap;
+
+  @include mq() {
+    font-size: rem(30);
+  }
+}
+
+.top__items {
+  color: $white;
+  font-family: $second-font-family;
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+
+  @include mq() {
+    display: flex;
+    justify-content: center;
+    top: 68%;
+  }
+}
+
+.top__item {
+  text-align: center;
+}
+
+.top__item:not(:first-child) {
+  @include mq() {
+    margin-left: rem(50);
+  }
+}
+
+.top__item a {
+  display: inline-block;
+  width: 100%;
+  font-size: rem(30);
+  padding: rem(30) 0;
+  position: relative;
+
+  @include mq() {
+    font-size: rem(50);
+    padding: rem(30);
+  }
+}
+
+.top__item a::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: calc(50% - rem(45));
+  transform: translate(-50%, -50%);
+  width: rem(70);
+  height: rem(70);
+  background: $color-sub;
+  border-radius: 50%;
+  z-index: map-get($layer, 'circle');
+
+  @include mq() {
+    left: calc(50% - rem(80));
+    width: rem(80);
+    height: rem(80);
+    transition: .3s;
+  }
+}
+
+.top__item a:hover {
+
+  @media (any-hover:hover) {
+    color: $black;
+  }
+}
+
+.top__item a:hover::before {
+
+  @media (any-hover:hover) {
+    width: 100%;
+    border-radius: 280px;
+    left: 50%;
+  }
+}
+
