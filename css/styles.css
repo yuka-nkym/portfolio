@@ -1498,6 +1498,8 @@ pc
         -ms-flex-pack: center;
             justify-content: center;
     top: 68%;
+    margin-top: 16px;
+    margin-top: 1rem;
   }
 }
 
